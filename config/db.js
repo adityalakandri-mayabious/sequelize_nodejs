@@ -19,12 +19,6 @@ db.User=UserModel(sequelize,Sequelize);
 // console.log("this is user",db.User)
 
 
-// Test the DB connection and log errors
-try {
-  await sequelize.authenticate();
-  console.log("✅ Database connected successfully.");
-} catch (error) {
-  console.error("❌ Unable to connect to the database:", error.message);
-}
+
 
 export default db;
