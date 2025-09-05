@@ -14,7 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 db.sequelize.sync();
 
 import UserRoute from "./routes/UserRouter.js";
+import PostRoute from "./routes/PostsRouter.js";
 app.use(UserRoute);
+app.use(PostRoute);
 
 const port = process.env.PORT || 3008;
 
@@ -26,5 +28,5 @@ try {
     console.log(`Server is running at PORT : ${port}`);
   });
 } catch (error) {
-  console.error("Unable to connect to the database:", error.message);
+  console.error("Unable to connect to the database:",error.message);
 }

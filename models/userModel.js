@@ -23,6 +23,7 @@ const UserModel = (sequelize, Sequelize) => {
       timeStamps: true,
     }
   );
+
   return user;
 };
 
