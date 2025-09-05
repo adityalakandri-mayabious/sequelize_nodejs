@@ -18,6 +18,7 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 db.User = UserModel(sequelize, Sequelize);
 db.Post = PostModel(sequelize, Sequelize);
+// console.log("This is db",db.User)
 
 //associations
 db.User.hasMany(db.Post, { foreignKey: "userId" });
